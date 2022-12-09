@@ -24,10 +24,6 @@ const PdfViewer = ({ content }) => {
       showToolbar={true}
       showNavbar={false}
       page={1}
-      // initial_scale={data.initial_scale}
-      // initial_scale_ratio={data.initial_scale_ratio}
-      // enableScroll={!data.disableScroll}
-      // fitPageWidth={data.fitPageWidth}
       onPageRenderSuccess={(page, canvasEl, viewport) => {
         setSize([
           `${Math.round(viewport.width / CSS_UNITS)}px`,

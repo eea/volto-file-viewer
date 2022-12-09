@@ -1,7 +1,8 @@
-import PdfViewer from './PdfViewer';
+import PdfView from './PdfView';
 
 const applyConfig = (config) => {
-  config.views.contentTypesViews.File = PdfViewer;
+  console.log('CONFIG', config);
+  config.views.contentTypesViews.File = PdfView;
 
   return config;
 };
