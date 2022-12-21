@@ -24,7 +24,7 @@ const PdfViewer = ({ content }) => {
       css="pdf-viewer"
       navigation={NavigationToolbar}
       showToolbar={true}
-      showNavbar={false}
+      showNavbar={true}
       page={1}
       onPageRenderSuccess={(page, canvasEl, viewport) => {
         setSize([
