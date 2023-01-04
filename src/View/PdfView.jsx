@@ -24,6 +24,8 @@ const PdfView = ({ content }) => {
         navigation={NavigationToolbar}
         showToolbar={true}
         showNavbar={true}
+        showPagesPreview={true}
+        enableScroll={false}
         page={1}
       />
     </div>
