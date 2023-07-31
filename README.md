@@ -1,18 +1,18 @@
-# volto-pdf-viewer
+# volto-file-viewer
 
-[![Releases](https://img.shields.io/github/v/release/eea/volto-pdf-viewer)](https://github.com/eea/volto-pdf-viewer/releases)
+[![Releases](https://img.shields.io/github/v/release/eea/volto-file-viewer)](https://github.com/eea/volto-file-viewer/releases)
 
-[![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-pdf-viewer%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-pdf-viewer/job/master/display/redirect)
-[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-master&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-master)
-[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-master&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-master)
-[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-master&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-master)
-[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-master&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-master)
+[![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-file-viewer%2Fmaster&subject=master)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-file-viewer/job/master/display/redirect)
+[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-master&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-master)
+[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-master&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-master)
+[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-master&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-master)
+[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-master&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-master)
 
-[![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-pdf-viewer%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-pdf-viewer/job/develop/display/redirect)
-[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-develop&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-develop)
-[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-develop&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-develop)
-[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-develop&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-develop)
-[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-pdf-viewer-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-pdf-viewer-develop)
+[![Pipeline](https://ci.eionet.europa.eu/buildStatus/icon?job=volto-addons%2Fvolto-file-viewer%2Fdevelop&subject=develop)](https://ci.eionet.europa.eu/view/Github/job/volto-addons/job/volto-file-viewer/job/develop/display/redirect)
+[![Lines of Code](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-develop&metric=ncloc)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-develop)
+[![Coverage](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-develop&metric=coverage)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-develop)
+[![Bugs](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-develop&metric=bugs)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-develop)
+[![Duplicated Lines (%)](https://sonarqube.eea.europa.eu/api/project_badges/measure?project=volto-file-viewer-develop&metric=duplicated_lines_density)](https://sonarqube.eea.europa.eu/dashboard?id=volto-file-viewer-develop)
 
 
 [Volto](https://github.com/plone/volto) add-on
@@ -23,9 +23,22 @@ Demo GIF
 
 ## Getting started
 
-### Add volto-pdf-viewer to your Volto project
+### Try volto-file-viewer with Docker
+
+      git clone https://github.com/eea/volto-file-viewer.git
+      cd volto-file-viewer
+      make
+      make start
+
+Go to http://localhost:3000
+
+### Add volto-file-viewer to your Volto project
 
 1. Make sure you have a [Plone backend](https://plone.org/download) up-and-running at http://localhost:8080/Plone
+
+   ```Bash
+   docker compose up backend
+   ```
 
 1. Start Volto frontend
 
@@ -33,11 +46,11 @@ Demo GIF
 
    ```JSON
    "addons": [
-       "@eeacms/volto-pdf-viewer"
+       "@eeacms/volto-file-viewer"
    ],
 
    "dependencies": {
-       "@eeacms/volto-pdf-viewer": "*"
+       "@eeacms/volto-file-viewer": "*"
    }
    ```
 
@@ -45,7 +58,7 @@ Demo GIF
 
    ```
    npm install -g yo @plone/generator-volto
-   yo @plone/volto my-volto-project --canary --addon @eeacms/volto-pdf-viewer
+   yo @plone/volto my-volto-project --canary --addon @eeacms/volto-file-viewer
    cd my-volto-project
    ```
 
@@ -62,23 +75,18 @@ Demo GIF
 
 ## Release
 
-See [RELEASE.md](https://github.com/eea/volto-pdf-viewer/blob/master/RELEASE.md).
+See [RELEASE.md](https://github.com/eea/volto-file-viewer/blob/master/RELEASE.md).
 
 ## How to contribute
 
-See [DEVELOP.md](https://github.com/eea/volto-pdf-viewer/blob/master/DEVELOP.md).
+See [DEVELOP.md](https://github.com/eea/volto-file-viewer/blob/master/DEVELOP.md).
 
 ## Copyright and license
 
 The Initial Owner of the Original Code is European Environment Agency (EEA).
 All Rights Reserved.
 
-See [LICENSE.md](https://github.com/eea/volto-pdf-viewer/blob/master/LICENSE.md) for details.
-
-## Funding
-
-[European Environment Agency (EU)](http://eea.europa.eu)
-don-template/blob/master/LICENSE.md) for details.
+See [LICENSE.md](https://github.com/eea/volto-file-viewer/blob/master/LICENSE.md) for details.
 
 ## Funding
 
