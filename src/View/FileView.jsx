@@ -10,9 +10,10 @@ const FileView = (props) => {
     [fileType],
   );
 
-  const RenderFileView = useMemo(() => getViewByType() || DefaultFileView, [
-    getViewByType,
-  ]);
+  const RenderFileView = useMemo(
+    () => getViewByType() || DefaultFileView,
+    [getViewByType],
+  );
 
   return <RenderFileView {...props} />;
 };
